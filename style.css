@@ -159,11 +159,12 @@ form button:hover {
   }
 }
 
-/* === Logbog (terminal look) === */
 .logbog {
-  background: transparent;   /* ingen grøn boks */
-  color: #0f0;               /* klassisk grøn tekst */
+  background: none !important;   /* fjerner baggrund helt */
+  box-shadow: none !important;   /* ingen skygge */
+  border: none !important;       /* ingen ramme */
+  color: #0f0;                   /* grøn tekst */
   font-family: "Courier New", Courier, monospace;
   padding: 20px;
   margin-top: 20px;
-  white-space: pre-wrap;     /* så linjeskift vises rigtigt */
+  white-space: pre-wrap;         /* så linjeskift vises korrekt */
