@@ -63,7 +63,7 @@ nav a:hover {
   border-color: #555;
 }
 
-/* Mobil: altid samme layout */
+/* === Mobil: layout der matcher desktop mest muligt === */
 @media (max-width: 768px) {
   body {
     background-attachment: scroll; /* mobil performance */
@@ -72,14 +72,16 @@ nav a:hover {
   nav {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch; /* fyld hele bredden */
+    padding: 0 10px;      /* lidt luft i siderne */
   }
 
   nav a {
     display: block;
-    margin: 10px auto;
-    width: 80%;
-    max-width: 250px;
+    margin: 8px 0;
+    width: 100%;
+    max-width: none;
+    text-align: center;
   }
 
   .cv-grid {
@@ -197,4 +199,15 @@ body.logbog-page {
   position: relative;
 }
 
-/* Fjern evt. gam*
+/* Finjustér logbog-linjer så cursoren er helt inline */
+.logbog p { 
+  margin: 0 0 8px;           /* normal linjeafstand */
+}
+.logbog p:last-child { 
+  display: inline; 
+  margin: 0;                 /* ingen ekstra luft på sidste linje */
+}
+.logbog p:last-child::after {
+  display: inline;           /* cursor følger teksten præcist */
+  margin-left: 2px;          /* lille afstand fra sidste tegn */
+}
