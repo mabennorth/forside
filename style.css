@@ -40,4 +40,55 @@ nav {
 nav a {
   text-decoration: none;
   color: #007acc;
-  font-weight:
+  font-weight: bold;
+  margin: 0 12px;
+  padding: 6px 12px;
+  border: 2px solid #007acc;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  background: #007acc;
+  color: #fff;
+}
+
+/* === Card stil til sektioner (CV, Projekter, Logbog osv.) === */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 20px 0;
+}
+
+/* === CV layout === */
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.cv-column {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.cv-column h2 {
+  color: #007acc;
+  border-bottom: 2px solid #007acc;
+  padding-bottom: 6px;
+  margin: 18px 0 12px;
+}
+
+.cv-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c
