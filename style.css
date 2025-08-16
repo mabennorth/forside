@@ -191,20 +191,20 @@ body.logbog-page {
   border: none;
   color: #0f0;
   white-space: pre-wrap;
-  display: inline;
+  display: inline-block; /* så cursoren står lige efter sidste tegn */
   position: relative;
+  font-family: "Courier New", monospace;
 }
 
-/* Blinkende cursor under sidste linje */
+/* Cursor */
 .logbog::after {
-  content: "|";              /* selve cursoren */
-  display: block;            /* gør at den kommer på ny linje */
-  margin-top: 2px;           /* lille afstand */
-  animation: blink 1s infinite;
+  content: "|";
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s step-start infinite;
   color: #0f0;
 }
 
-/* Fjern cursor på sidste <p> */
-.logbog p:last-child::after {
-  content: none;
+@keyframes blink {
+  50% { opacity: 0; }
 }
