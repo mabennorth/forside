@@ -189,3 +189,10 @@ body.logbog-page {
 /* Blink animation */
 @keyframes blink {
   50% { opacity: 0; }
+
+  /* === Navigation i logbog skal matche de andre sider === */
+body.logbog-page nav a {
+  font-family: Arial, sans-serif; /* samme som de andre sider */
+  color: #fff; /* stadig hvide links */
+}
+
