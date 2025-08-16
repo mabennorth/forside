@@ -1,16 +1,20 @@
-/* --- CV layout --- */
+/* --- CV layout som cards --- */
 .cv-grid {
   display: grid;
   grid-template-columns: 1fr 1fr; /* to lige brede kolonner */
   gap: 40px;
   margin-top: 20px;
-  max-width: 1000px;   /* gør at det ikke fylder hele skærmen */
-  margin-left: auto;   /* centrer grid’et */
+  max-width: 1000px;
+  margin-left: auto;
   margin-right: auto;
 }
 
 .cv-column {
-  text-align: left; /* så tekst og lister står korrekt */
+  background: #fff;              /* hvid baggrund */
+  padding: 20px;                 /* luft indeni kortet */
+  border-radius: 10px;           /* afrundede hjørner */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* blød skygge */
+  text-align: left;
 }
 
 .cv-column h2 {
@@ -21,29 +25,4 @@
 }
 
 .cv-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.cv-column li {
-  margin: 8px 0;
-  padding-left: 14px;
-  position: relative;
-  line-height: 1.5;
-}
-
-.cv-column li::before {
-  content: "•";
-  color: #007acc;
-  position: absolute;
-  left: 0;
-}
-
-/* Mobilvenligt: stack kolonner under hinanden under 700px */
-@media (max-width: 700px) {
-  .cv-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-}
+  list-style: none
