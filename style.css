@@ -191,7 +191,7 @@ body.logbog-page {
   border: none;
   color: #0f0;
   white-space: pre-wrap;
-  display: inline-block; /* så cursoren står lige efter sidste tegn */
+  display: block; /* så cursoren står lige efter sidste tegn */
   position: relative;
   font-family: "Courier New", monospace;
 }
