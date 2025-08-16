@@ -199,7 +199,7 @@ body.logbog-page {
 .logbog::after {
   content: "|";
   display: block;        /* gør at den kommer på ny linje */
-  margin-top: 0.2em;     /* lidt luft over */
+  margin-top: 2em;     /* lidt luft over */
   color: #0f0;
   animation: blink 1s step-start infinite;
 }
