@@ -174,8 +174,18 @@ body.logbog-page {
   border: none;
   color: #0f0;
   white-space: pre-wrap;
-  display: inline-block;  /* cursor lige efter teksten */
+  display: inline;  /* cursor lige efter teksten */
   position: relative;
 }
 
-/* Blinkende cu*
+/* Blinkende cursor */
+.logbog::after {
+  content: "|";
+  display: inline;
+  animation: blink 1s step-start infinite;
+  color: #0f0;
+}
+
+/* Blink animation */
+@keyframes blink {
+  50% { opacity: 0; }
