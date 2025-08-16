@@ -171,26 +171,19 @@ form button:hover {
   position: relative;            /* kræves til cursor */
 }
 
-/* Tilføj cursor */
+/* Blinkende cursor */
 .logbog::after {
-  content: "|"; /* selve stregen */
+  content: "";                   /* ingen symbol, vi laver en “ægte” streg */
+  display: inline-block;
+  width: 2px;                    /* tynd streg */
+  height: 1em;                   /* samme højde som tekst */
+  background-color: #0f0;        /* grøn farve */
   margin-left: 4px;
   animation: blink 1s step-start infinite;
+  vertical-align: bottom;
 }
 
-/* Blink animation */
-@keyframes blink {
-  50% { opacity: 0; }
-
-/* Tilføj cursor */
-.logbog::after {
-  content: "|"; /* selve stregen */
-  margin-left: 4px;
-  animation: blink 1s step-start infinite;
-}
-
-/* Blink animation */
+/* Animation */
 @keyframes blink {
   50% { opacity: 0; }
 }
-
