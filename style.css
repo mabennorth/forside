@@ -212,5 +212,3 @@ body.logbog-page {
 .logbog p:last-child::after {
   content: none;
 }
-
-}
