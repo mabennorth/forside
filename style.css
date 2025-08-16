@@ -63,7 +63,12 @@ nav a:hover {
   border-color: #555;
 }
 
+/* Mobil: altid samme layout */
 @media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* mobil performance */
+  }
+
   nav {
     display: flex;
     flex-direction: column;
@@ -75,6 +80,10 @@ nav a:hover {
     margin: 10px auto;
     width: 80%;
     max-width: 250px;
+  }
+
+  .cv-grid {
+    grid-template-columns: 1fr; /* 1 kolonne på mobil */
   }
 }
 
@@ -169,18 +178,6 @@ form button:hover {
   color: #fff;
 }
 
-/* === Responsivt design === */
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll; /* mobil performance */
-  }
-
-  .cv-grid {
-    grid-template-columns: 1fr; /* 1 kolonne på mobil */
-  }
-}
-
-/* === Logbog stil === */
 /* === Logbog stil === */
 body.logbog-page {
   background: #000 !important;  /* sort baggrund over hele siden */
@@ -200,14 +197,4 @@ body.logbog-page {
   position: relative;
 }
 
-/* Blinkende cursor på sidste linje */
-.logbog p:last-child::after {
-  content: "|";
-  animation: blink 1s step-start infinite;
-  color: #0f0;
-}
-
-/* Blink animation */
-@keyframes blink {
-  50% { opacity: 0; }
-}
+/* Fjern evt. gam*
