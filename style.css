@@ -199,8 +199,8 @@ body.logbog-page {
 /* Cursor */
 .logbog::after {
   content: "|";
-  display: inline;
-  margin-left: 2px;
+  display: block;
+  margin-left: 0px;
   animation: blink 1s step-start infinite;
   color: #0f0;
 }
