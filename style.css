@@ -189,7 +189,8 @@ body.logbog-page {
 /* Blink animation */
 @keyframes blink {
   50% { opacity: 0; }
-
+}
+  
   /* === Navigation i logbog skal matche de andre sider === */
 body.logbog-page nav a {
   font-family: Arial, sans-serif; /* samme som de andre sider */
@@ -223,3 +224,6 @@ nav a {
   }
 }
 
+nav, nav a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-size: 1rem; /* Ens størrelse */
