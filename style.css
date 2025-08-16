@@ -168,3 +168,29 @@ form button:hover {
   padding: 20px;
   margin-top: 20px;
   white-space: pre-wrap;         /* så linjeskift vises korrekt */
+  position: relative;            /* kræves til cursor */
+}
+
+/* Tilføj cursor */
+.logbog::after {
+  content: "|"; /* selve stregen */
+  margin-left: 4px;
+  animation: blink 1s step-start infinite;
+}
+
+/* Blink animation */
+@keyframes blink {
+  50% { opacity: 0; }
+
+/* Tilføj cursor */
+.logbog::after {
+  content: "|"; /* selve stregen */
+  margin-left: 4px;
+  animation: blink 1s step-start infinite;
+}
+
+/* Blink animation */
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
