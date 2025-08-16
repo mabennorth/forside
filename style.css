@@ -211,3 +211,14 @@ body.logbog-page {
 @keyframes blink {
   50% { opacity: 0; }
 }
+
+/* Fjern cursor fra hele boksen */
+.logbog::after {
+  content: none;
+}
+
+/* Tilføj cursor på sidste linje (p) */
+.logbog p:last-child::after {
+  content: "|";
+  animation: blink 1s step-start infinite;
+  color: #0f0;
