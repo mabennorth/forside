@@ -66,26 +66,22 @@ nav a:hover {
 /* === Mobil: layout der matcher desktop mest muligt === */
 @media (max-width: 768px) {
   body {
-    background-attachment: scroll; /* mobil performance */
+    background-attachment: scroll;
   }
 
   nav {
     display: flex;
-    flex-direction: column;
-    align-items: stretch; /* fyld hele bredden */
-    padding: 0 10px;      /* lidt luft i siderne */
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap; /* ingen linjeskift */
   }
 
   nav a {
-    display: block;
-    margin: 8px 0;
-    width: 100%;
-    max-width: none;
-    text-align: center;
+    margin: 6px;
   }
 
   .cv-grid {
-    grid-template-columns: 1fr; /* 1 kolonne på mobil */
+    grid-template-columns: 1fr;
   }
 }
 
