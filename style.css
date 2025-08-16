@@ -199,7 +199,7 @@ body.logbog-page {
 /* Cursor */
 .logbog::after {
   content: "|";
-  display: inline-block;
+  display: inline;
   margin-left: 2px;
   animation: blink 1s step-start infinite;
   color: #0f0;
