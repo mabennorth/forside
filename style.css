@@ -199,15 +199,18 @@ body.logbog-page {
   position: relative;
 }
 
-/* Finjustér logbog-linjer så cursoren er helt inline */
-.logbog p { 
-  margin: 0 0 8px;           /* normal linjeafstand */
+/* Blinkende cursor under sidste linje */
+.logbog::after {
+  content: "|";              /* selve cursoren */
+  display: block;            /* gør at den kommer på ny linje */
+  margin-top: 2px;           /* lille afstand */
+  animation: blink 1s infinite;
+  color: #0f0;
 }
-.logbog p:last-child { 
-  display: inline; 
-  margin: 0;                 /* ingen ekstra luft på sidste linje */
-}
+
+/* Fjern cursor på sidste <p> */
 .logbog p:last-child::after {
-  display: inline;           /* cursor følger teksten præcist */
-  margin-left: 2px;          /* lille afstand fra sidste tegn */
+  content: none;
+}
+
 }
