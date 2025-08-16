@@ -156,3 +156,18 @@ form button:hover {
 .projektliste a:hover {
   color: #555;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('baggrund.jpg') no-repeat center center fixed;
+  background-size: cover;   /* sørger for at billedet fylder hele skærmen */
+  color: #000;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
