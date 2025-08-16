@@ -160,28 +160,36 @@ form button:hover {
 }
 
 .logbog {
-  background: none !important;   /* ingen baggrund */
-  box-shadow: none !important;   /* ingen skygge */
-  border: none !important;       /* ingen ramme */
-  color: #0f0;                   /* grøn tekst */
+/* === Logbog-stil === */
+body.logbog-page {
+  background: #000 !important;  /* Sort baggrund over hele siden */
+  color: #0f0;                  /* Grøn tekst */
   font-family: "Courier New", Courier, monospace;
+  margin: 0;
   padding: 20px;
-  margin-top: 20px;
-  white-space: pre-wrap;         /* så linjeskift vises korrekt */
+}
+
+/* Selve logbogsteksten */
+.logbog {
+  background: transparent;      /* Ingen boks rundt om */
+  box-shadow: none;
+  border: none;
+  color: #0f0;
+  white-space: pre-wrap;
+  display: inline-block;        /* Cursor kommer lige efter sidste bogstav */
   position: relative;
-  display: inline-block;         /* så cursoren sidder lige efter teksten */
 }
 
 /* Blinkende cursor */
 .logbog::after {
-  content: "|";                  /* selve stregen */
-  display: inline;               /* gør den til tekst, ikke blok */
+  content: "|";                 /* Selve stregen */
+  display: inline;
   margin-left: 2px;
   animation: blink 1s step-start infinite;
-  color: #0f0;                   /* samme grønne farve som tekst */
+  color: #0f0;
 }
 
-/* Animation */
+/* Blink animation */
 @keyframes blink {
   50% { opacity: 0; }
 }
