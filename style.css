@@ -10,12 +10,6 @@ html, body {
   color: #fff; /* hvid tekst udenfor bokse */
 }
 
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll; /* bedre til mobil */
-  }
-}
-
 /* === Container === */
 .container {
   max-width: 1000px;
@@ -43,11 +37,124 @@ h1 {
 /* === Navigation === */
 nav {
   text-align: center;
-  margin: 20px 0 40px; /* luft før/efter navigation */
+  margin: 30px 0;
 }
 
 nav a {
   text-decoration: none;
   color: #fff; /* hvide knapper */
   font-weight: bold;
-  margin: 0 12p
+  margin: 0 12px;
+  padding: 6px 12px;
+  border: 2px solid #fff; /* hvid outline */
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  background: #555;   
+  color: #fff;
+  border-color: #555;
+}
+
+/* === Card stil til bokse (bruges i CV, Projekter osv.) === */
+.card, .cv-column, .projektliste {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 20px 0;
+  color: #000; /* sort tekst i bokse */
+}
+
+/* === CV layout === */
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.cv-column h2 {
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 6px;
+  margin: 18px 0 12px;
+}
+
+.cv-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* === Projekter === */
+.projektliste {
+  text-align: center;
+}
+
+.projektliste a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.projektliste a:hover {
+  color: #555;
+}
+
+/* === Kontaktformular === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form input, 
+form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* === Send-knap som outline ligesom menu === */
+form button {
+  background: transparent;
+  color: #fff;
+  padding: 12px;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+form button:hover {
+  background: #555;
+  border-color: #555;
+  color: #fff;
+}
+
+/* === Responsivt design === */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* mobil performance */
+  }
+
+  .cv-grid {
+    grid-template-columns: 1fr; /* 1 kolonne på mobil */
+  }
+}
