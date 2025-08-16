@@ -1,28 +1,43 @@
-/* --- CV layout som cards --- */
-.cv-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* to lige brede kolonner */
-  gap: 40px;
-  margin-top: 20px;
+/* === Global reset === */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.container {
   max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.cv-column {
-  background: #fff;              /* hvid baggrund */
-  padding: 20px;                 /* luft indeni kortet */
-  border-radius: 10px;           /* afrundede hjørner */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* blød skygge */
-  text-align: left;
+/* === Header / overskrifter === */
+h1, h2, h3 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 10px;
+  color: #222;
 }
 
-.cv-column h2 {
+h1 {
   color: #007acc;
-  border-bottom: 2px solid #007acc;
-  padding-bottom: 6px;
-  margin: 18px 0 12px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.cv-column ul {
-  list-style: none
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* === Navigation === */
+nav {
+  text-align: center;
+  margin-top: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #007acc;
+  font-weight:
