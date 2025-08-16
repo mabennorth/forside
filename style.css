@@ -156,8 +156,13 @@ body {
   margin: 0;
   padding: 0;
   background: url('GS.jpeg') no-repeat center center fixed;
-  background-size: cover;   /* billedet fylder hele skærmen */
-  color: #000;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* kun på mobil */
+  }
 }
 
 .container {
