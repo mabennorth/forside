@@ -1,102 +1,49 @@
-/* Reset standard */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* --- CV layout --- */
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* to lige brede kolonner */
+  gap: 40px;
+  margin-top: 20px;
+  max-width: 1000px;   /* gør at det ikke fylder hele skærmen */
+  margin-left: auto;   /* centrer grid’et */
+  margin-right: auto;
 }
 
-/* Baggrund og font */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-  color: #333;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 40px;
+.cv-column {
+  text-align: left; /* så tekst og lister står korrekt */
 }
 
-/* Container */
-.container {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  text-align: center;
-  max-width: 700px;
-  width: 100%;
-}
-
-/* Overskrift */
-h1 {
+.cv-column h2 {
   color: #007acc;
-  margin-bottom: 20px;
+  border-bottom: 2px solid #007acc;
+  padding-bottom: 6px;
+  margin: 18px 0 12px;
 }
 
-/* Brødtekst */
-p {
-  font-size: 18px;
-  margin-bottom: 15px;
+.cv-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cv-column li {
+  margin: 8px 0;
+  padding-left: 14px;
+  position: relative;
   line-height: 1.5;
 }
 
-/* Navigation */
-nav {
-  margin: 20px 0;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  background: #007acc;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
-
-nav a:hover {
-  background: #005fa3;
-}
-
-/* Kontaktformular */
-.kontakt {
-  margin-top: 30px;
-  text-align: left;
-}
-
-.kontakt h2 {
-  text-align: center;
-  margin-bottom: 15px;
+.cv-column li::before {
+  content: "•";
   color: #007acc;
+  position: absolute;
+  left: 0;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form input,
-form textarea {
-  margin-bottom: 15px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-}
-
-form button {
-  background: #007acc;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background 0.3s;
-}
-
-form button:hover {
-  background: #005fa3;
+/* Mobilvenligt: stack kolonner under hinanden under 700px */
+@media (max-width: 700px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 }
