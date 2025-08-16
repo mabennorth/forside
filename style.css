@@ -181,6 +181,7 @@ form button:hover {
 }
 
 /* === Logbog stil === */
+/* === Logbog stil === */
 body.logbog-page {
   background: #000 !important;  /* sort baggrund over hele siden */
   color: #0f0;                  /* grøn tekst */
@@ -195,14 +196,13 @@ body.logbog-page {
   border: none;
   color: #0f0;
   white-space: pre-wrap;
-  display: inline;  /* cursor lige efter teksten */
+  display: inline;
   position: relative;
 }
 
-/* Blinkende cursor */
-.logbog::after {
+/* Blinkende cursor på sidste linje */
+.logbog p:last-child::after {
   content: "|";
-  display: inline;
   animation: blink 1s step-start infinite;
   color: #0f0;
 }
@@ -211,14 +211,3 @@ body.logbog-page {
 @keyframes blink {
   50% { opacity: 0; }
 }
-
-/* Fjern cursor fra hele boksen */
-.logbog::after {
-  content: none;
-}
-
-/* Tilføj cursor på sidste linje (p) */
-.logbog p:last-child::after {
-  content: "|";
-  animation: blink 1s step-start infinite;
-  color: #0f0;
