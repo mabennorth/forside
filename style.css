@@ -192,22 +192,14 @@ body.logbog-page {
   color: #0f0;
   white-space: pre-wrap;
   font-family: "Courier New", monospace;
+  position: relative;
 }
 
-.logbog p {
-  margin: 0 0 6px;
-}
-
-/* Cursor KUN på sidste linje */
-.logbog p:last-child {
-  display: inline;
-  margin: 0;
-}
-
-.logbog p:last-child::after {
+/* Blinkende cursor på ny linje */
+.logbog::after {
   content: "|";
-  display: inline-block;
-  margin-left: 2px; /* ændr til 0 hvis du vil have den helt tæt på */
+  display: block;        /* gør at den kommer på ny linje */
+  margin-top: 0.2em;     /* lidt luft over */
   color: #0f0;
   animation: blink 1s step-start infinite;
 }
