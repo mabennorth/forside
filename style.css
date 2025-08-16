@@ -37,24 +37,45 @@ h1 {
 /* === Navigation === */
 nav {
   text-align: center;
-  margin: 30px 0;
+  margin: 20px 0;
+  font-size: 1rem;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 nav a {
+  display: inline-block;
+  padding: 8px 14px;
+  font-size: inherit;
   text-decoration: none;
-  color: #fff; /* hvide knapper */
-  font-weight: bold;
-  margin: 0 12px;
-  padding: 6px 12px;
-  border: 2px solid #fff; /* hvid outline */
+  color: #fff;
+  border: 2px solid #fff;
   border-radius: 6px;
+  margin: 0 8px;
   transition: all 0.3s;
+  white-space: nowrap;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
 nav a:hover {
-  background: #555;   
+  background: #555;
   color: #fff;
   border-color: #555;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 250px;
+  }
 }
 
 /* === Card stil til bokse (bruges i CV, Projekter osv.) === */
@@ -190,40 +211,3 @@ body.logbog-page {
 @keyframes blink {
   50% { opacity: 0; }
 }
-  
-  /* === Navigation i logbog skal matche de andre sider === */
-body.logbog-page nav a {
-  font-family: Arial, sans-serif; /* samme som de andre sider */
-  color: #fff; /* stadig hvide links */
-}
-
-/* Navigation skal altid skalere pænt */
-nav {
-  text-align: center;
-  margin: 20px 0;
-  font-size: 1rem; /* ens font-størrelse på alle sider */
-}
-
-nav a {
-  display: inline-block;
-  padding: 8px 14px; /* ens afstand */
-  font-size: inherit; /* arver 1rem */
-  text-decoration: none;
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 6px;
-  margin: 0 8px;
-  transition: all 0.3s;
-}
-
-@media (max-width: 600px) {
-  nav a {
-    display: block;       /* links under hinanden på mobil */
-    margin: 10px auto;
-    max-width: 200px;     /* ikke for brede */
-  }
-}
-
-nav, nav a {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-  font-size: 1rem; /* Ens størrelse */
