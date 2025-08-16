@@ -159,38 +159,23 @@ form button:hover {
   }
 }
 
-.logbog {
-/* === Logbog-stil === */
+/* === Logbog stil === */
 body.logbog-page {
-  background: #000 !important;  /* Sort baggrund over hele siden */
-  color: #0f0;                  /* Grøn tekst */
+  background: #000 !important;  /* sort baggrund over hele siden */
+  color: #0f0;                  /* grøn tekst */
   font-family: "Courier New", Courier, monospace;
   margin: 0;
   padding: 20px;
 }
 
-/* Selve logbogsteksten */
 .logbog {
-  background: transparent;      /* Ingen boks rundt om */
+  background: transparent;
   box-shadow: none;
   border: none;
   color: #0f0;
   white-space: pre-wrap;
-  display: inline-block;        /* Cursor kommer lige efter sidste bogstav */
+  display: inline-block;  /* cursor lige efter teksten */
   position: relative;
 }
 
-/* Blinkende cursor */
-.logbog::after {
-  content: "|";                 /* Selve stregen */
-  display: inline;
-  margin-left: 2px;
-  animation: blink 1s step-start infinite;
-  color: #0f0;
-}
-
-/* Blink animation */
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
+/* Blinkende cu*
