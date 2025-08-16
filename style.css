@@ -135,3 +135,24 @@ form button {
 form button:hover {
   background: #333; /* mørkere grå ved hover */
 }
+
+.projektliste {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.projektliste a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.projektliste a:hover {
+  color: #555;
+}
