@@ -196,3 +196,30 @@ body.logbog-page nav a {
   color: #fff; /* stadig hvide links */
 }
 
+/* Navigation skal altid skalere pænt */
+nav {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1rem; /* ens font-størrelse på alle sider */
+}
+
+nav a {
+  display: inline-block;
+  padding: 8px 14px; /* ens afstand */
+  font-size: inherit; /* arver 1rem */
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  margin: 0 8px;
+  transition: all 0.3s;
+}
+
+@media (max-width: 600px) {
+  nav a {
+    display: block;       /* links under hinanden på mobil */
+    margin: 10px auto;
+    max-width: 200px;     /* ikke for brede */
+  }
+}
+
