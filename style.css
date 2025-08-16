@@ -160,7 +160,7 @@ form button:hover {
 }
 
 .logbog {
-  background: none !important;   /* fjerner baggrund helt */
+  background: none !important;   /* ingen baggrund */
   box-shadow: none !important;   /* ingen skygge */
   border: none !important;       /* ingen ramme */
   color: #0f0;                   /* grøn tekst */
@@ -168,22 +168,21 @@ form button:hover {
   padding: 20px;
   margin-top: 20px;
   white-space: pre-wrap;         /* så linjeskift vises korrekt */
-  position: relative;            /* kræves til cursor */
+  position: relative;
+  display: inline-block;         /* så cursoren sidder lige efter teksten */
 }
 
 /* Blinkende cursor */
 .logbog::after {
-  content: "";                   /* ingen symbol, vi laver en “ægte” streg */
-  display: inline-block;
-  width: 2px;                    /* tynd streg */
-  height: 1em;                   /* samme højde som tekst */
-  background-color: #0f0;        /* grøn farve */
-  margin-left: 4px;
+  content: "|";                  /* selve stregen */
+  display: inline;               /* gør den til tekst, ikke blok */
+  margin-left: 2px;
   animation: blink 1s step-start infinite;
-  vertical-align: bottom;
+  color: #0f0;                   /* samme grønne farve som tekst */
 }
 
 /* Animation */
 @keyframes blink {
   50% { opacity: 0; }
 }
+
