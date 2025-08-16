@@ -5,49 +5,49 @@
   <title>Logbog</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    /* === Logbog stil (command prompt look) === */
     body {
-      background-color: #000;
-      color: #0f0;
+      background: #000; /* sort baggrund */
+      color: #0f0; /* grøn tekst */
       font-family: "Courier New", monospace;
-      margin: 0;
       padding: 20px;
     }
 
+    .logbog {
+      background: #000;
+      padding: 20px;
+      border: 2px solid #0f0;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+      max-width: 800px;
+      margin: 40px auto;
+    }
+
+    .logbog p {
+      margin: 10px 0;
+    }
+
+    /* === Navigation skal matche de andre sider === */
     nav {
-      margin-bottom: 20px;
-      text-align: left;
+      text-align: center;
+      margin: 20px 0 40px;
     }
 
     nav a {
-      color: #0f0;
       text-decoration: none;
+      color: #fff; /* hvide knapper */
       font-weight: bold;
-      margin-right: 20px;
-      border: 1px solid #0f0;
-      padding: 4px 8px;
+      margin: 0 12px;
+      padding: 6px 12px;
+      border: 2px solid #fff; /* hvid outline */
+      border-radius: 6px;
+      transition: all 0.3s;
     }
 
     nav a:hover {
-      background: #0f0;
-      color: #000;
-    }
-
-    .logbog {
-      white-space: pre-wrap; /* så linjeskift i HTML bliver vist */
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-
-    /* Blinkende cursor */
-    .cursor {
-      display: inline-block;
-      width: 10px;
-      background: #0f0;
-      animation: blink 1s step-start infinite;
-    }
-
-    @keyframes blink {
-      50% { background: transparent; }
+      background: #555;   
+      color: #fff;
+      border-color: #555;
     }
   </style>
 </head>
@@ -60,16 +60,12 @@
   </nav>
 
   <div class="logbog">
-    Velkommen til logbogen...
-    <br>
-    14/08/2025 - Første indlæg i logbogen.
-    <br>
-    15/08/2025 - Arbejder videre med projekterne.
-    <br>
-    16/08/2025 - Justerede design og layout.
-    <br>
-    <span class="cursor"></span>
+    <p>C:\Users\Mathias&gt; Start logbog</p>
+    <p>[12-08-2025] Første indlæg – opsatte projektet og begyndte på HTML</p>
+    <p>[13-08-2025] Fik lavet CSS med baggrundsbillede og bokse</p>
+    <p>[14-08-2025] Tilføjede navigation og flere undersider</p>
+    <p>[15-08-2025] Arbejdet videre med kontaktformular og projekter</p>
+    <p>[16-08-2025] Logbogen fik et oldschool terminal-look ✅</p>
   </div>
 </body>
 </html>
-
