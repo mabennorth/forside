@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <title>Logbog</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: #0f0;
+      font-family: "Courier New", monospace;
+      margin: 0;
+      padding: 20px;
+    }
+
+    nav {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    nav a {
+      color: #0f0;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 20px;
+      border: 1px solid #0f0;
+      padding: 4px 8px;
+    }
+
+    nav a:hover {
+      background: #0f0;
+      color: #000;
+    }
+
+    .logbog {
+      white-space: pre-wrap; /* så linjeskift i HTML bliver vist */
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* Blinkende cursor */
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      background: #0f0;
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      50% { background: transparent; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Forside</a>
+    <a href="cv.html">CV</a>
+    <a href="projekter.html">Projekter</a>
+  </nav>
+
+  <div class="logbog">
+    Velkommen til logbogen...
+    <br>
+    14/08/2025 - Første indlæg i logbogen.
+    <br>
+    15/08/2025 - Arbejder videre med projekterne.
+    <br>
+    16/08/2025 - Justerede design og layout.
+    <br>
+    <span class="cursor"></span>
+  </div>
+</body>
+</html>
 
