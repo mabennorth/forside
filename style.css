@@ -10,6 +10,12 @@ html, body {
   color: #fff; /* hvid tekst udenfor bokse */
 }
 
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* bedre til mobil */
+  }
+}
+
 /* === Container === */
 .container {
   max-width: 1000px;
@@ -37,21 +43,11 @@ h1 {
 /* === Navigation === */
 nav {
   text-align: center;
-  margin-top: 40px;
+  margin: 20px 0 40px; /* luft før/efter navigation */
 }
 
 nav a {
   text-decoration: none;
   color: #fff; /* hvide knapper */
   font-weight: bold;
-  margin: 0 12px;
-  padding: 6px 12px;
-  border: 2px solid #fff; /* hvid outline */
-  border-radius: 6px;
-  transition: all 0.3s;
-}
-
-nav a:hover {
-  background: #555;   
-  color: #fff;
-  border-color: #55
+  margin: 0 12p
