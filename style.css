@@ -193,6 +193,8 @@ body.logbog-page {
   white-space: pre-wrap;
   font-family: "Courier New", monospace;
   position: relative;
+  display: inline-block;
+  margin: 0;
 }
 
 /* Blinkende cursor på ny linje */
