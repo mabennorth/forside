@@ -56,4 +56,40 @@ C:\Users\Mathias&gt;logbog<br>
 [18-08-2025] ...
 </div>
 </body>
-</html>
+</html
+
+/* === Logbog stil === */
+body.logbog-page {
+  background: #000 !important;  /* sort baggrund over hele siden */
+  color: #0f0;                  /* grøn tekst */
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  padding: 20px;
+}
+
+.logbog {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  color: #0f0;
+  white-space: pre-wrap;
+  font-family: "Courier New", monospace;
+  position: relative;
+  display: block;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Blinkende cursor på ny linje */
+.logbog::after {
+  content: "|";
+  display: block;        /* gør at den kommer på ny linje */
+  line-height: 1.2;
+  color: #0f0;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
