@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="da">
-<head><meta name="viewport" content="width=1000, initial-scale=0.7">
+<head>
+  <meta name="viewport" content="width=1000, initial-scale=0.7">
   <meta charset="UTF-8">
   <title>Logbog</title>
   <link rel="stylesheet" href="style.css">
@@ -15,23 +16,27 @@
     }
 
     .logbog {
-      background: none;
+      background: transparent;
       border: none;
       box-shadow: none;
       color: #0f0;
       white-space: pre-wrap;
-      display: inline-block;
+      font-family: "Courier New", monospace;
       position: relative;
+      display: block;
+      margin: 0;
+      line-height: 1.2;
     }
 
-    /* Blinkende cursor */
-    .logbog::after {
-      content: "|";
-      display: inline;
-      margin-left: 2px;
-      animation: blink 1s step-start infinite;
-      color: #0f0;
-    }
+    /* Blinkende cursor på ny linje */
+      .logbog::after {
+        content: " |";        /* mellemrum + cursor */
+        display: block;       /* står på ny linje */
+        height: 1em;          /* højde som en tekstlinje */
+        line-height: 1.2;     /* matcher tekstens line-height */
+        color: #0f0;
+        animation: blink 1s step-start infinite;
+}
 
     @keyframes blink {
       50% { opacity: 0; }
@@ -39,7 +44,7 @@
   </style>
 </head>
 <body class="logbog-page">
-  <!-- Navigation (samme markup som de andre sider) -->
+  <!-- Navigation -->
   <nav>
     <a href="index.html">Forside</a>
     <a href="cv.html">CV</a>
@@ -47,49 +52,13 @@
     <a href="logbog.html">Logbog</a>
   </nav>
 
-  <<div class="logbog">
+  <div class="logbog">
 C:\Users\Mathias&gt;logbog<br>
 [11-08-2025] Opsætning af virtuelle maskiner<br>
 [12-08-2025] Opsætning af statisk IP<br>
 [13-08-2025] Lave workgroup netværk på 2 virtuelle maskiner<br>
 [16-08-2025] Opsætning af github og mbprojects.dk<br>
 [18-08-2025] ...
-</div>
+  </div>
 </body>
-</html
-
-/* === Logbog stil === */
-body.logbog-page {
-  background: #000 !important;  /* sort baggrund over hele siden */
-  color: #0f0;                  /* grøn tekst */
-  font-family: "Courier New", Courier, monospace;
-  margin: 0;
-  padding: 20px;
-}
-
-.logbog {
-  background: transparent;
-  box-shadow: none;
-  border: none;
-  color: #0f0;
-  white-space: pre-wrap;
-  font-family: "Courier New", monospace;
-  position: relative;
-  display: block;
-  margin: 0;
-  line-height: 1.2;
-}
-
-/* Blinkende cursor på ny linje */
-.logbog::after {
-  content: "|";
-  display: block;        /* gør at den kommer på ny linje */
-  line-height: 1.2;
-  color: #0f0;
-  animation: blink 1s step-start infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
+</html>
