@@ -1,0 +1,6 @@
+# Aktivér RewriteEngine
+RewriteEngine On
+
+# Fjern .html fra URL’er
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
