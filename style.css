@@ -195,6 +195,7 @@ body.logbog-page {
   position: relative;
   display: inline-block;
   margin: 0;
+  line-height: 1.2;
 }
 
 /* Blinkende cursor på ny linje */
