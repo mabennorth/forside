@@ -202,7 +202,7 @@ body.logbog-page {
 .logbog::after {
   content: "|";
   display: block;        /* gør at den kommer på ny linje */
-  margin-top: 72px;     /* lidt luft over */
+  line-height: 1.2;
   color: #0f0;
   animation: blink 1s step-start infinite;
 }
