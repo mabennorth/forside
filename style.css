@@ -193,7 +193,7 @@ body.logbog-page {
   white-space: pre-wrap;
   font-family: "Courier New", monospace;
   position: relative;
-  display: inline-block;
+  display: block;
   margin: 0;
   line-height: 1.2;
 }
